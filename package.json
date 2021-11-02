@@ -1,0 +1,20 @@
+{
+  "name": "create-dr-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "create-dr-app": "./bin/generate-app.js"
+  },
+  "keywords": [
+    "react",
+    "boilerplate",
+    "typescript",
+    "starter"
+  ],
+  "author": "DRLee98",
+  "license": "ISC"
+}
