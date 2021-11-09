@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "sourceMap": true, //sourcemap fiile(xxx.js.map)을 생성할 것인지 유무를 설정 디버깅이 필요한 개발환경에서는 true로 하고, 배포 사이즈를 줄여야 하는 배포환경에서는 false
+    "noImplicitAny": false, //설정을 켜면 TypeScript는 any로 추론되는 것을 에러로 간주하게 된다.
+    "module": "commonjs", // 프로그램에서 사용할 모듈 시스템
+    "target": "es5", //TypeScript가 컴파일 되는 결과물인 JavaScript 코드로 변환되는 버전을 결정
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "removeComments": true, //컴파일 시킬 때, 주석(comments)을 모두 제거
+    "allowSyntheticDefaultImports": true, // export default 를 export 한 값들을 가지는 객체로 설정
+    "allowJs": true, //allowJS는 .ts, .tsx 파일에서 .js 파일을 import 할 수 있게 해준다.
+    "baseUrl": ".", //절대경로처럼 시작점을 명시해주는 것이다. 실제로 path를 resolve 할 때에도 상대경로가 아니라면 baseurl 부터 찾는다.
+    "esModuleInterop": true, // es module 사용시 컴파일 단계에서 헬퍼 함수를 사용할 것인가
+    "outDir": "dist", // 빌드 후 내보낼 파일 디렉토리
+    "jsx": "react"
+  },
+  "include": ["./src/**/*"], // 컴파일 대상 폴더 경로
+  "exclude": ["./node_modules/**/*"] // 컴파일 제외 폴더 경로
+}
+
+//컴파일 대상 경로를 정의하는 속성의 우선 순위
+// files > include = exclude // exclude에 있더라도 files에 지정된 파일은 컴파일 대상이 된다.
+
+// exclude에 node_modules를 지정하더라도 @types 폴더는 컴파일에 포함한다!
