@@ -35,6 +35,7 @@ if (projectName !== ".") {
 async function main() {
   try {
     console.log("Downloading files...");
+    execSync("cd ..");
     execSync("cd project");
     execSync(`cp -r * ${projectPath}`);
 
